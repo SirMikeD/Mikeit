@@ -1,0 +1,20 @@
+/* Add this CSS for dark mode */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* Add this CSS for the button */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button#toggleMode {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

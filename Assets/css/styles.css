@@ -1,0 +1,68 @@
+
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button#toggleMode {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cloud-container {
+  width: 50%; /* Adjust the width of the cloud container */
+  float: left;
+  padding-right: 20px; /* Add some spacing between cloud and form */
+}
+
+#cloud {
+  width: 100%;
+  max-width: 200px; /* Adjust the maximum width of the cloud */
+  height: auto;
+  display: block;
+}
+
+.form-container {
+  width: 50%; /* Adjust the width of the form container */
+  float: left;
+}
+
+/* Add the rest of the cloud styling */
+.cloud {
+  background-color: #fff;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+  overflow: hidden;
+}
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+}
+.cloud:before {
+  width: 50%;
+  height: 80px;
+  border-radius: 100% 0 100% 100% / 100% 50% 50% 100%;
+  top: -30px;
+  left: 30px;
+  transform: rotate(-30deg);
+}
+.cloud:after {
+  width: 60%;
+  height: 100px;
+  border-radius: 0 100% 100% 100% / 50% 100% 100% 50%;
+  top: -20px;
+  left: 80px;
+  transform: rotate(30deg);
+}
