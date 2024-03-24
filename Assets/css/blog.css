@@ -1,20 +1,88 @@
-/* Add this CSS for dark mode */
-body.dark-mode {
-  background-color: #333;
-  color: white;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/TopBG.jpg'); /* Replace with the path to your meno.jpg image */
+  background-size: cover; /* Ensures the background image covers the entire body */
+  background-position: center; /* Centers the background image */
 }
 
-/* Add this CSS for the button */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, #00ff00, #000);
+  overflow: hidden;
 }
 
-button#toggleMode {
-  padding: 10px;
-  background-color: #333;
-  color: white;
+.meno {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 10px; /* Align to the left */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.submitted-blogs {
+  position: absolute;
+  bottom: 10px; /* Adjust positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.submitted-blogs h2 {
+  font-family: 'Consolas, \'Courier New\', monospace';
+  font-size: 43px;
+  color: #fff;
+  text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px  1px 0 #000,
+      1px  1px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px  2px 0 #000,
+      2px  2px 0 #000;
+}
+
+.say-your-mind {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: #00ff00;
+  color: #000;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.main {
+  padding: 20px;
+}
+
+.submitted-blogs {
+  color: #fff;
+}
+
+.blog-list {
+  margin-top: 20px;
+}
+
+.blog-post {
+  border: 1px solid #000; /* Add border around each blog post */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-post h3 {
+  margin-bottom: 5px;
+}
+
+.blog-post p {
+  margin: 0;
 }
