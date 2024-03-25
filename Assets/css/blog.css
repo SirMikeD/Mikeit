@@ -25,17 +25,16 @@ body {
   object-fit: cover;
 }
 
-.submitted-blogs {
-  position: absolute;
-  bottom: 10px; /* Adjust positioning as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
 
 .submitted-blogs h2 {
   font-family: Arial, sans-serif; /* Change font family */
   font-size: 43px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 36px;
   color: #00ff00; /* Change text color to green */
   text-shadow: 
       -1px -1px 0 #000,  
@@ -46,6 +45,19 @@ body {
       2px -2px 0 #000,
       -2px  2px 0 #000,
       2px  2px 0 #000;
+}
+
+#toggleBtn {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: #00ff00; /* Green background */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .say-your-mind {
@@ -89,4 +101,39 @@ body {
   margin: 10px 0; 
   font-size: 14px;
   color: #ccc; 
+}
+
+.light-mode body {
+  background-image: none; /* Remove background image */
+  background-color: #fff; /* Set background color to white */
+  color: #000; /* Set text color to black */
+}
+
+.light-mode .header {
+  background: linear-gradient(135deg, #000, #00ff00); /* Black to green gradient */
+}
+
+.light-mode .submitted-blogs h2 {
+  color: #000; /* Change text color to black */
+  text-shadow: none; /* Remove text shadow */
+}
+
+.light-mode #toggleBtn,
+.light-mode .say-your-mind {
+  background: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+.light-mode .blog-post {
+  border: 1px solid #000; /* Black border */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Darker shadow */
+}
+
+.light-mode .blog-post h3 {
+  color: #000; /* Black text color */
+}
+
+.light-mode .blog-post p {
+  color: #666; /* Dark gray text color */
 }

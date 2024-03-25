@@ -36,11 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Toggle light mode/dark mode
-    const toggleModeBtn = document.getElementById('toggleModeBtn');
-    if (toggleModeBtn) {
-        toggleModeBtn.addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode'); // Toggle the 'dark-mode' class on the body
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            const body = document.body;
+            body.classList.toggle('light-mode'); // Toggle light mode class
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
         });
     }
 });

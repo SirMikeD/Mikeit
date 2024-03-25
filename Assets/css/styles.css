@@ -1,15 +1,17 @@
+/* Default dark mode styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('../images/TopBg.jpg'); /* Add background image */
+  background-image: url('../images/TopBg.jpg');
   background-size: cover;
   background-position: center;
+  color: #fff;
 }
 
 .header {
   position: relative;
-  height: 300px; /* Increase header height */
+  height: 300px;
   background: linear-gradient(135deg, #00ff00, #000);
   overflow: hidden;
 }
@@ -30,78 +32,121 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; /* Center align the content */
+  text-align: center;
   font-size: 36px;
-  color: #fff;
-  text-shadow: 
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px  1px 0 #000,
-    1px  1px 0 #000,
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px  2px 0 #000,
-    2px  2px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#toggleBtn {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: #00ff00; /* Green background */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .browse {
   position: absolute;
   top: 50%;
-  right: 20px; /* Adjust as needed */
+  right: 20px;
   transform: translateY(-50%);
+  padding: 10px 20px;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.browse {
+  background: #00ff00;
+}
+
+#submitBtn {
+  display: block; /* Change display to block to make it a block-level element */
+  margin: 10px auto 0; /* Adjust top margin to create space between the form box and the button */
   padding: 10px 20px;
   background: #00ff00;
   color: #000;
   border: none;
-  border-radius: 20px; /* Make the button rounded */
+  border-radius: 20px;
   cursor: pointer;
+  width: fit-content; /* Set width to fit its content */
 }
 
-.browse:hover {
-  background: #009900; /* Change button background color on hover */
+.browse:hover,
+#submitBtn:hover {
+  background: #009900;
 }
 
 .form-section {
-  margin-top: 50px; /* Adjust margin-top as needed */
+  margin-top: 50px;
 }
 
-/* Additional style for the form elements */
 #username,
 #blogTitle,
 #blogContent {
   display: block;
   width: 56%;
   padding: 10px;
-  margin: 10px auto; /* Adjust between form elements */
-  color: rgb(255, 255, 255); /* Set text color */
-  background-color: rgb(6, 41, 17);
+  margin: 10px auto;
+  color: #000;
+  background-color: #fff;
   border-radius: 5px;
   border: 2px solid #00ff00;
   box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(110, 2, 2, 0.4); /* Darker shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 #blogContent {
   height: 200px;
 }
 
-#submitBtn {
-  display: block;
-  margin: 10px auto; /* Adjust margin for the submit button */
-  background: #00ff00;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  padding: 10px 20px;
-  width: 50%;
+/* Light mode styles */
+.light-mode body {
+  background-image: none;
 }
 
-#submitBtn:hover {
-  background: #009900;
+.light-mode .header {
+  background: linear-gradient(135deg, #000, #00ff00); /* Black to green gradient */
 }
 
-body.dark-mode {
-  background-color: #222; /* Dark background color */
-  color: #fff; /* Light text color */
+.light-mode .meno {
+  filter: brightness(1.8) invert(1); /* Invert image colors */
+}
+
+.light-mode .intro {
+  color: #000; /* Set text color to black */
+  text-shadow: none; /* Remove text shadow */
+}
+
+.light-mode #toggleBtn {
+  background: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+.light-mode .browse {
+  background: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+.light-mode .blog-form input,
+.light-mode .blog-form textarea {
+  background-color: #fff; /* White background */
+  color: #000; /* Set text color to black */
+  border-color: #000; /* Set border color to black */
+}
+
+.light-mode #submitBtn {
+  background: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+.light-mode #submitBtn:hover,
+.light-mode .browse:hover {
+  background: #333; /* Darker background on hover */
 }

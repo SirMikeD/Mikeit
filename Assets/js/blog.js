@@ -29,4 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Call function to display blogs
   displayBlogs();
+
+  // Toggle light mode/dark mode
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            const body = document.body;
+            body.classList.toggle('light-mode'); // Toggle light mode class
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
+        });
+    }
 });
