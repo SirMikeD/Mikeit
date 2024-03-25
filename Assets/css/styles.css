@@ -100,3 +100,8 @@ body {
 #submitBtn:hover {
   background: #009900;
 }
+
+body.dark-mode {
+  background-color: #222; /* Dark background color */
+  color: #fff; /* Light text color */
+}

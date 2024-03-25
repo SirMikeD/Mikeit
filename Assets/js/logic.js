@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const blogTitle = document.getElementById('blogTitle').value;
             const blogContent = document.getElementById('blogContent').value;
         
+            // Check if any of the fields are empty
+            if (!username || !blogTitle || !blogContent) {
+                alert('Please complete all fields.'); // Display an alert message if any field is empty
+                return; // Exit the function
+            }
+        
             // Create data object
             const data = {
                 username: username,
@@ -27,6 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
             // Redirect to blog.html
             window.location.href = 'blog.html';
+        });
+    }
+    
+    // Toggle light mode/dark mode
+    const toggleModeBtn = document.getElementById('toggleModeBtn');
+    if (toggleModeBtn) {
+        toggleModeBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode'); // Toggle the 'dark-mode' class on the body
         });
     }
 });
