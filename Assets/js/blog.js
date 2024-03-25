@@ -1,37 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
   const blogList = document.getElementById('blogList');
-  const usernameInput = document.getElementById('username');
-  const blogTitleInput = document.getElementById('blogTitle');
-  const blogContentInput = document.getElementById('blogContent');
-  
-  // Function to add a new blog post
-  function addBlogPost() {
-      // Get form values
-      const username = usernameInput.value;
-      const blogTitle = blogTitleInput.value;
-      const blogContent = blogContentInput.value;
 
-      // Create blog post element
-      const blogPost = document.createElement('div');
-      blogPost.classList.add('blog-post');
-      blogPost.innerHTML = `
-          <h3>${blogTitle}</h3>
-          <p><strong>By:</strong> ${username}</p>
-          <p>${blogContent}</p>
-      `;
+  // Retrieve blogs from local storage
+  const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
 
-      // Add new blog post below existing ones
-      blogList.appendChild(blogPost);
+  // Function to display blogs
+  function displayBlogs() {
+      blogList.innerHTML = ''; // Clear existing content
 
-      // Clear form inputs
-      usernameInput.value = '';
-      blogTitleInput.value = '';
-      blogContentInput.value = '';
+      blogs.forEach(function(blog) {
+          // Create elements for blog post
+          const postContainer = document.createElement('div');
+          postContainer.classList.add('blog-post-container');
+
+          const blogPost = document.createElement('div');
+          blogPost.classList.add('blog-post');
+          blogPost.innerHTML = `
+              <h3>${blog.title}</h3>
+              <p class="author">By: ${blog.username}</p>
+              <p class="content">${blog.content}</p>
+          `;
+
+          // Append blog post to container and container to blog list
+          postContainer.appendChild(blogPost);
+          blogList.appendChild(postContainer);
+      });
   }
 
-  // Event listener for the submit button in index.html
-  document.getElementById('submitBtn').addEventListener('click', function(event) {
-      event.preventDefault();
-      addBlogPost();
-  });
+  // Call function to display blogs
+  displayBlogs();
 });

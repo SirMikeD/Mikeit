@@ -1,90 +1,102 @@
-.header {
-  position: relative;
-  height: 200px;
-  background: linear-gradient(135deg, #00ff00, #000);
-  overflow: hidden;
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('../images/TopBg.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
-  background-size: cover; /* Ensures the background image covers the entire body */
-  background-position: center; /* Centers the background image */
+  background-image: url('../images/TopBg.jpg'); /* Add background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position: relative;
+  height: 300px; /* Increase header height */
+  background: linear-gradient(135deg, #00ff00, #000);
+  overflow: hidden;
 }
 
 .meno {
   position: absolute;
-  top: 10px;
-  bottom:10px;
+  top: 50%;
   left: 10px;
-  width: 50px;
-  height: 50px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-}
-
-.browse {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  background: #00ff00;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.main {
-  padding: 20px;
+  object-fit: cover;
 }
 
 .intro {
-  text-align: center;
-  font-family: 'Consolas, \'Courier New\', monospace';
-  font-size: 43px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Center align the content */
+  font-size: 36px;
   color: #fff;
   text-shadow: 
     -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px  1px 0 #000,
-       1px  1px 0 #000,
-      -2px -2px 0 #000,
-       2px -2px 0 #000,
-      -2px  2px 0 #000,
-       2px  2px 0 #000;
-  }
+    1px  1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px  2px 0 #000,
+    2px  2px 0 #000;
 }
 
-.form-section {
-  margin-top: 20px;
-}
-
-.blog-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.blog-form input,
-.blog-form textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #00ff00;
-  border-radius: 5px;
-  background: transparent;
-  color: #fff;
-}
-
-.blog-form textarea {
-  height: 150px;
-}
-
-.blog-form button {
+.browse {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Adjust as needed */
+  transform: translateY(-50%);
   padding: 10px 20px;
   background: #00ff00;
   color: #000;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px; /* Make the button rounded */
   cursor: pointer;
+}
+
+.browse:hover {
+  background: #009900; /* Change button background color on hover */
+}
+
+.form-section {
+  margin-top: 50px; /* Adjust margin-top as needed */
+}
+
+/* Additional style for the form elements */
+#username,
+#blogTitle,
+#blogContent {
+  display: block;
+  width: 56%;
+  padding: 10px;
+  margin: 10px auto; /* Adjust between form elements */
+  color: rgb(255, 255, 255); /* Set text color */
+  background-color: rgb(6, 41, 17);
+  border-radius: 5px;
+  border: 2px solid #00ff00;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(110, 2, 2, 0.4); /* Darker shadow */
+}
+
+#blogContent {
+  height: 200px;
+}
+
+#submitBtn {
+  display: block;
+  margin: 10px auto; /* Adjust margin for the submit button */
+  background: #00ff00;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 50%;
+}
+
+#submitBtn:hover {
+  background: #009900;
 }
