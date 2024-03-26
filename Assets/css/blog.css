@@ -2,14 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('../images/TopBg.jpg'); /* Add background image */
-  background-size: cover;
-  background-position: center;
+  background-color: Black
 }
 
 .header {
   position: relative;
-  height: 200px;
+  height: 300px;
   background: linear-gradient(135deg, #00ff00, #000); /* Green to black gradient */
   overflow: hidden;
 }
@@ -35,16 +33,16 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 36px;
-  color: #00ff00; /* Change text color to green */
+  color: #000000; /* Change text color to green */
   text-shadow: 
-      -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px  1px 0 #000,
-      1px  1px 0 #000,
-      -2px -2px 0 #000,
-      2px -2px 0 #000,
-      -2px  2px 0 #000,
-      2px  2px 0 #000;
+      -1px -1px 0 #fff,  
+      1px -1px 0 #fff,
+      -1px  1px 0 #fff,
+      1px  1px 0 #fff,
+      -2px -2px 0 #fff,
+      2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+      2px  2px 0 #fff;
 }
 
 #toggleBtn {
@@ -103,6 +101,10 @@ body {
   color: #ccc; 
 }
 
+.light-mode .meno {
+  filter: brightness(1.8) invert(1); /* Invert image colors */
+}
+
 .light-mode body {
   background-image: none; /* Remove background image */
   background-color: #fff; /* Set background color to white */
@@ -114,8 +116,15 @@ body {
 }
 
 .light-mode .submitted-blogs h2 {
-  color: #000; /* Change text color to black */
-  text-shadow: none; /* Remove text shadow */
+  color: #00ff00; /* Change text color to black */
+    text-shadow: -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000, 
+    -2px -2px 0 #000, 
+    2px -2px 0 #000, 
+    -2px 2px 0 #000, 
+    2px 2px 0 #000;
 }
 
 .light-mode #toggleBtn,

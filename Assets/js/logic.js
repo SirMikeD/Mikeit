@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let darkMode = true;
     const submitBtn = document.getElementById('submitBtn');
     if(submitBtn) {
         submitBtn.addEventListener('click', function(event) {
@@ -41,8 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (toggleBtn) {
         toggleBtn.addEventListener('click', function() {
             const body = document.body;
-            body.classList.toggle('light-mode'); // Toggle light mode class
-            body.classList.toggle('dark-mode'); // Toggle dark mode class
+            if (darkMode){
+                body.setAttribute('class', 'light-mode');
+                darkMode=false;
+            }
+            else
+            {body.setAttribute('class', 'dark-mode');
+                darkMode=true;
+            }
         });
     }
 });
