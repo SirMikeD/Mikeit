@@ -1,7 +1,5 @@
 # Mikeit Blog (A play on Reddit)
 
-![Header Image](./Assets/images/meno.jpg)
-
 ## Table of Contents
 
 - [Description](#description)
