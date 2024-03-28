@@ -58,4 +58,4 @@ Mike Daigle - Sirdaig@gmail.com
 
 ## Preview
 
-![Preview](./Assets/images/Screenshot.jpg)
+![Preview](./Assets/images/Screenshot.png)
