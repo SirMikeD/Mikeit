@@ -30,9 +30,13 @@ Mikeit Blog is a simple blogging platform where users can submit their blogs and
    ```bash
    git clone https://github.com/your-username/mikeit-blog.git
 
-2. cd mikeit-blog
+2. Navigate to the blog in Bash
+   ```bash
+   cd mikeit-blog
 
-3. npm install
+3. Navigate to the blog in Bash
+   ```bash
+   npm install
 
 ## Usage
 
