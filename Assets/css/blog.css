@@ -106,12 +106,13 @@ body {
   2px -2px 0 #000,
   -2px  2px 0 #000,
   2px  2px 0 #000;
+  letter-spacing: 5px; /* Add letter spacing */
 }
 
 .blog-post p {
   margin: 10px 0; 
   font-size: 14px;
-  color: #ccc; 
+  color: #ffffff; 
 }
 
 .light-mode .meno {
@@ -126,18 +127,6 @@ body {
   background: linear-gradient(135deg, #000, #00ff00);
 }
 
-.light-mode .submitted-blogs h2 {
-  color: #00ff00;
-  text-shadow: -1px -1px 0 #000, 
-  1px -1px 0 #000, 
-  -1px 1px 0 #000, 
-  1px 1px 0 #000, 
-  -2px -2px 0 #000, 
-  2px -2px 0 #000, 
-  -2px 2px 0 #000, 
-  2px 2px 0 #000;
-}
-
 .light-mode #toggleBtn,
 .light-mode .say-your-mind {
   background: #000;
@@ -145,9 +134,12 @@ body {
 }
 
 .light-mode .blog-post {
-  border: 1px solid #000;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid #00ff00; /* Green border */
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+
 }
 
 .light-mode .blog-post h3 {

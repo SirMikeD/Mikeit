@@ -84,7 +84,12 @@ body {
   display: block;
   margin: 10px auto 0;
   width: fit-content;
+  padding: 10px 20px;
   background: #00ff00; /* Green background */
+  color: #000;
+  border: none;
+  border-radius: 5px; /* Adjust border-radius to match toggle switch */
+  cursor: pointer;
 }
 
 /* Form styles */
