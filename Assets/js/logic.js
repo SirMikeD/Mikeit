@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
             // Check if any of the fields are empty
             if (!username || !blogTitle || !blogContent) {
-                alert('Please complete all fields.'); // Display an alert message if any field is empty
+                alert('Please complete all fields or click on Browse Blogs to view them without posting one of your own.'); // Display an alert message if any field is empty
                 return; // Exit the function
             }
         
