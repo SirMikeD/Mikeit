@@ -122,6 +122,8 @@ body {
   background-image: url('../images/ambg.jpg'); /* Footer background image */
   padding: 20px;
   margin-top: auto; /* Push the footer to the bottom of the page */
+  background-size: cover;
+  background-position: center;
 }
 
 .footer p {
