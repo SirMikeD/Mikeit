@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let darkMode = true;
     const submitBtn = document.getElementById('submitBtn');
+    
     if(submitBtn) {
         submitBtn.addEventListener('click', function(event) {
             event.preventDefault();
@@ -37,19 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Toggle light mode/dark mode
     const toggleBtn = document.getElementById('toggleBtn');
 
     if (toggleBtn) {
         toggleBtn.addEventListener('click', function() {
             const body = document.body;
-            if (darkMode){
-                body.setAttribute('class', 'light-mode');
-                darkMode=false;
-            }
-            else
-            {body.setAttribute('class', 'dark-mode');
-                darkMode=true;
-            }
+            body.classList.toggle('light-mode'); // Toggle light mode class
+            body.classList.toggle('dark-mode'); // Toggle dark mode class
+            
+            darkMode = !darkMode; // Update darkMode flag
         });
     }
 });

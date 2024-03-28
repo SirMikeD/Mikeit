@@ -1,14 +1,15 @@
-/* Default dark mode styles */
+/* General styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: black; 
+  background-image: url('../images/TopBg.jpg'); /* Dark mode background image */
   background-size: cover;
   background-position: center;
   color: #000000;
 }
 
+/* Header styles */
 .header {
   position: relative;
   height: 300px;
@@ -44,6 +45,7 @@ body {
     2px 2px 0 #fff;
 }
 
+/* Toggle button styles */
 #toggleBtn {
   position: absolute;
   top: 15%;
@@ -57,64 +59,13 @@ body {
   cursor: pointer;
 }
 
-.toggle-switch {
-  position: relative;
+/* Button styles */
+.button {
   display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.toggle-switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Adjust border-radius to match toggle switch */
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 .browse {
@@ -124,40 +75,21 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   padding: 10px 20px;
   color: #000;
+  background: #00ff00; /* Green background */
   border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.browse {
-  background: #00ff00;
+  border-radius: 5px; /* Adjust border-radius to match toggle switch */
 }
 
 #submitBtn {
-  display: block; /* Change display to block to make it a block-level element */
-  margin: 10px auto 0; /* Adjust top margin to create space between the form box and the button */
-  padding: 10px 20px;
-  background: #00ff00;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  width: fit-content; /* Set width to fit its content */
+  display: block;
+  margin: 10px auto 0;
+  width: fit-content;
+  background: #00ff00; /* Green background */
 }
 
-.browse:hover,
-#submitBtn:hover,
-#toggleBtn:hover {
-  background: #009900;
-}
-
-.form-section {
-  margin-top: 50px;
-}
-
-#username,
-#blogTitle,
-#blogContent {
+/* Form styles */
+.blog-form input[type="text"],
+.blog-form textarea {
   display: block;
   width: 56%;
   padding: 10px;
@@ -166,8 +98,8 @@ input:checked + .slider:before {
   padding: 20px;
   margin-bottom: 20px;
   background-color: rgb(6, 41, 17);
-  border-radius: 10px; /* Add border radius for rounded corners */
-  box-shadow: 0 2px 4px rgba(110, 2, 2, 0.4); /* Darker shadow */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(110, 2, 2, 0.4);
 }
 
 #blogContent {
@@ -175,65 +107,47 @@ input:checked + .slider:before {
 }
 
 /* Light mode styles */
-.light-mode body {
-  background-color: white;
+.light-mode {
+  background-image: url('../images/TopBgWhite.jpg'); /* Light mode background image */
 }
 
 .light-mode .header {
-  background: linear-gradient(135deg, #000, #00ff00); /* Black to green gradient */
+  background: linear-gradient(135deg, #000, #00ff00);
 }
 
 .light-mode .meno {
-  filter: brightness(1.8) invert(1); /* Invert image colors */
+  filter: brightness(1.8) invert(1);
 }
 
 .light-mode .intro {
-  color: #000; /* Set text color to black */
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
-}; 
-
-
-.light-mode #username,
-.light-mode #blogTitle,
-.light-mode #blogContent {
-  background-color: #fff; /* White background */
-  color: #000; /* Set text color to black */
-  border-color: #000; /* Set border color to black */
+  color: #000;
 }
 
-.light-mode #submitBtn {
-  background: #000; /* Black background */
-  color: #fff; /* White text color */
+.light-mode .button {
+  color: #fff;
+  background: #000;
 }
 
-.light-mode #submitBtn:hover,
-.light-mode .browse:hover {
-  background: #333; /* Darker background on hover */
-}
-
-.light-mode #toggleBtn {
-  background: #000; /* Black background */
-  color: #fff; /* White text color */
-}
-
-.light-mode .browse {
-  background: #000; /* Black background */
-  color: #fff; /* White text color */
-}rgb(255, 255, 255)rgb(24, 25, 95)
-
-.light-mode .blog-form input,
+.light-mode .blog-form input[type="text"],
 .light-mode .blog-form textarea {
-  background-color: #fff; /* White background */
-  color: #000; /* Set text color to black */
-  border-color: #000; /* Set border color to black */
+  background-color: #fff;
+  color: #000;
 }
 
 .light-mode #submitBtn {
-  background: #000; /* Black background */
-  color: #fff; /* White text color */
+  background: #000;
 }
 
-.light-mode #submitBtn:hover,
-.light-mode .browse:hover {
-  background: #333; /* Darker background on hover */
+/* Inverted colors for h1 and p in light mode */
+.light-mode .intro h1,
+.light-mode .intro p {
+  color: #fff; /* Invert text color */
+  text-shadow: -1px -1px 0 #000, /* Adjust shadow for inverted text */
+               1px -1px 0 #000, 
+              -1px 1px 0 #000, 
+               1px 1px 0 #000, 
+              -2px -2px 0 #fff, /* Adjust shadow for inverted text */
+               2px -2px 0 #fff, 
+              -2px 2px 0 #fff, 
+               2px 2px 0 #fff;
 }
